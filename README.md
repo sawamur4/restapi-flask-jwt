@@ -1,2 +1,4 @@
 # restapi-flask-jwt
-Login, Register, get from Fb 
+Login, Register, get from Fb
+
+## lib requirement
