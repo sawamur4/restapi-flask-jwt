@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import requests
+import json
 
 from flask import Flask, jsonify, request
 from flask_restful import Api
@@ -35,7 +37,14 @@ def login():
     if username and password :
         user = UserModel.find_by_username(username)
         if user:
-            return "Error Username : {} Already Exist".format(username)
+            # auth_url = "http://127.0.0.1:5000/auth"
+            # data_body = {"username": username, "password": password}
+            # # headers = {'Content-Type': 'application/json'}
+            # r = requests.post(auth_url, json=data_body)
+            # # print response.status_code
+            # # return response.json()
+            # return json.dumps(r.json(), indent=4)
+            return "Login Success"
         else:
             return "Error Username Not found in DB"
     else:
